@@ -1,0 +1,40 @@
+﻿* {
+	margin: 0;
+	padding: 0;	
+	/*需要先将html和body元素扩充满整个浏览器页面*/
+	height: 100%;
+}
+
+
+.rect {
+	width: 400px;
+	height: 200px;	
+	background-color: #ccc;
+	/*达到藏起黄色圆形图案形成四分之一圆的目的*/
+	overflow: hidden;
+	
+	position: relative;	
+	/*垂直居中采用position方式加上向上平移一半的自身高度，水平居中采用margin方式*/
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background-color: #fc0;
+	border-radius: 50px;		
+}
+
+#c1 {
+	position: absolute;
+	top: -50px;
+	left: -50px;
+}
+
+#c2 {
+	position: absolute;
+	bottom: -50px;
+	right: -50px;
+}
