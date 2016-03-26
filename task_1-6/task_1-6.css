@@ -1,0 +1,460 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #5d5d5d;
+}
+
+/*总容器，代表整张报纸*/
+.container {
+	width: 980px;
+	height: 1386px;
+	margin: 0 auto;
+	padding: 0 44px;
+	background-color: #fff;
+	box-sizing: border-box;
+}
+
+/*报纸页眉部分*/
+header {
+	height: 61px;
+	border-bottom: 2px solid #938e8c;
+	position: relative;
+	margin-bottom: 30px;
+}
+
+header>p {
+	font-size: 12px;
+	color: #d45d5c;
+	position: absolute;
+	top: 45px;
+	right: 0;	
+	font-family: "SimHei"
+}
+
+.logo {
+	width: 110px;
+	height: 61px;
+	background-color: #d45d5c;
+}
+
+.logo p {
+	font-size: 12px;
+	color: #fff;
+	position: absolute;
+	top: 42px;
+	left: 5px;
+	font-family: "SimHei"
+}
+
+/*第一部分：左上大图+右上文字*/
+#sec_1 {
+	position: relative;
+	height: 301px;
+}
+
+#pic_1 {
+	width:641px;
+	height:301px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*利用两块纯色半透明div配合z-index覆盖图片，做出效果*/
+.mask_left {
+	width:191px;
+	height:301px;
+	background-color: rgba(66, 140, 89, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.mask_right{
+	width:191px;
+	height:301px;
+	background-color: rgba(204, 117, 128, 0.5);
+	position: absolute;
+	top: 0;
+	left: 450px;
+	z-index: 1;
+}
+
+.about_tech {
+	width: 220px;
+	height: 299px;
+	border-top: 2px solid #cc8091;
+	padding-top: 10px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: 2px;
+}
+
+.about_font_1 {
+	font: small-caps 24px/30px "Microsoft Yahei";
+	text-decoration: underline;
+	color: #000;
+}
+
+.about_font_2 {
+	font: italic 12px/10px "KaiTi";
+	color: #676767;
+	transform: translateY(4px);
+}
+
+.about_font_3 {
+	font: italic bold 116px/116px "Microsoft Yahei";
+	color: #75b86b;
+	position: absolute;
+	right: 28px;
+	transform: translateY(25px);
+}
+
+.about_font_4 {
+	font: 12px/12px "Microsoft Yahei";
+	color: #cc8091;
+	position: absolute;
+	bottom: 0;
+	right: 35px;
+}
+
+.about_font_5 {
+	font: 21px/21px "Microsoft Yahei";
+	color: #cc8091;
+	position: absolute;
+	bottom: 11px;
+	right: 101px;
+}
+
+.about_font_6 {
+	font: 55px/21px "Microsoft Yahei";
+	color: #cc8091;
+	position: absolute;
+	bottom: 11px;
+	right: 135px;
+}
+
+/*第二部分：中间的三栏式文章*/
+#sec_2 {
+	width: 641px;
+	height: 240px;
+	margin-right: 251px;
+	padding: 20px 0 0 0;
+}
+
+#atc_1 {
+	width: 220px;
+	margin-right: 25px;
+	float: left;
+}
+
+#atc_1 h1 {
+	font-size: 16px;
+	color: #418c59;
+	font-family: "Microsoft Yahei";
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 10px 0;
+}
+
+#atc_1 p {
+	font: 12px/16px "SimSun";
+	color: #767777;
+}
+
+#atc_2 {
+	width: 215px;
+	margin-right: 25px;
+	float: left;
+}
+
+#atc_2 h1 {
+	font-size: 16px;
+	color: #d2994f;
+	font-family: "Microsoft Yahei";
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 9.5px 0;
+}
+
+#atc_2 p {
+	font: 12px/16px "Microsoft Yahei";
+	color: rgba(35, 24, 21, 0.7);
+}
+
+#atc_3 {
+	width: 150px;
+	float: left;
+}
+
+#atc_3 h1 {
+	font-size: 16px;
+	color: #cc7680;
+	font-family: "Microsoft Yahei";
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 8px 0;
+}
+
+#atc_3 p {
+	font: 12px/22px "Microsoft Yahei";
+	color: rgba(35, 24, 21, 0.7);
+	/* color: rgba(205, 74, 72, 0.7); */
+}
+
+#atc_3 ul {
+	font: 12px/20px "Microsoft Yahei";
+	list-style-type: none;
+	float: left;
+	margin-top: 22px;
+}
+
+#atc_3 ul span {
+	color: #cd4a48;
+	opacity: 70%;
+	font-style: italic;
+}
+
+/*第三部分：底部的两栏内容*/
+#sec_3 {
+	width: 892px;
+	height: 673px;
+	border-bottom: 1px solid #938e8c;
+}
+
+.col_left {
+	width: 415px;
+	height: 673px;
+	float: left;
+	margin-right: 19px;
+}
+
+.col_left_title {
+	height: 160px;
+	border-bottom: 2px solid #10456B;
+}
+
+.col_left_title span {
+	font: bold 42px/16px "SimHei";
+	color: #11456b;
+}
+
+.col_left_title span:first-child {
+	font: italic bold 72px/72px "SimHei";
+	color: #f5e327;	
+	margin-right: 10px;
+}
+
+.col_left_title p {
+	font: bold 33px/30px "SimHei";
+	color: #11456b;
+	margin-bottom: 12px;
+}
+
+.col_left_title p:first-of-type {
+	font-size: 42px;
+}
+
+#atc_4 {
+	height: 450px;
+	margin-top: 20px;
+}
+
+/*利用左浮动制造出正文其余文字环绕首文字的效果*/
+.char_qian {
+	font: 80px/65px "Microsoft Yahei";
+	color: #f5e327;
+	float: left;
+	padding: 4px 5px 10px 0;
+}
+
+#atc_4 p{
+	font: 12px/19px "SimSun";
+	color: #767777;	
+}
+
+p.para_ind {
+	text-indent: 2em;
+}
+
+/*利用右浮动制造出正文环绕插图的效果*/
+#atc_4 p img {
+	float: right;
+	padding: 15px 3px 15px 15px;
+}
+
+.col_right {
+	width: 458px;
+	height: 673px;
+	float: left;
+}
+
+.col_right_pic {
+	width: 458px;
+	height: 275px;
+	margin-bottom: 41px;
+	background: url(./image/pic_3.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+/*利用一块纯色半透明div做出效果*/
+.mask_bar {
+	width: 458px;
+	height: 61px;
+	background-color: rgba(4, 0, 0, 0.4);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.mask_bar p {
+	height: 44px;
+	border-left: 3px solid #72b16a;
+	margin-left: 40px;
+	padding-left: 10px;
+	font: 26px/40px "Microsoft Yahei";
+	color: #fff;
+	position: absolute;
+	bottom: 9px;
+}
+
+.mask_bar span {
+	font: italic 12px/140% "Microsoft Yahei";
+	color: #72b16a;
+}
+
+.col_right_bottom {
+	width: 458px;
+	height: 318px;
+	background-color: #EEEDD6;
+	position: relative;
+}
+
+.catalog {
+	width: 458px;
+	height: 158px;
+	box-sizing: border-box;
+	padding: 35px 25px 35px 25px;
+}
+
+.catalog ul {
+	width: 408px;
+	list-style-type: none;
+}
+
+.catalog li {
+	font: 16px/20px "SimSun";
+	color: #5a5b5b;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+/*将span设置成右对齐，同时在html中将它们的位置分别放在各个p元素之前，做出右对齐效果*/
+.catalog span {
+	font: italic 12px/20px "SimSun";
+	color: #5a5b5b;
+	float: right;
+}
+
+.ending {
+	width: 458px;
+	height: 160px;
+	position: relative;
+}
+
+.ending_pic {
+	width: 260px;
+	height: 160px;
+	background-color: #D45D5C;
+}
+
+.ending_pic_zero {
+	width: 70px;
+	height: 86px;
+	font: 110px/80px "Microsoft Yahei";
+	color: #fff;
+	position: absolute;
+	bottom: 50%;
+	transform: translateY(50%);
+	left: 10px;
+}
+
+.ending_pic_text {
+	width: 180px;
+	height: 86px;
+	box-sizing: border-box;
+	padding-left: 6px;
+	border-left: 2px solid #fff;
+	position: absolute;
+	bottom: 50%;
+	transform: translateY(50%);
+	left: 80px;
+}
+
+.ending_p1 {
+	font: italic 21px/20px "SimHei";
+	color: #fff;
+	margin: 5px 0;
+}
+
+.ending_p2 {
+	font: 12px/12px "SimHei";
+	color: #fff;
+}
+
+.ending_text {
+	width: 198px;
+	height: 160px;
+	box-sizing: border-box;
+	padding: 15px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ending_text p {
+	font: italic 14px/16px "SimHei";
+	color: #5a5b5b;
+}
+
+.ending_text p:first-of-type {
+	text-indent: 3em;
+}
+
+/*由于两个引号所占空间大小远大于它们的视觉大小，所以将它们与文字段落分离，采用了更方便的position定位，而不是用浮动*/
+#quote_left {
+	font: 72px/42px "SimHei";
+	color: #d45d5c;
+	position: absolute;
+	bottom: 100px;
+	right: 150px;
+}
+
+#quote_right {
+	font: 72px/72px "SimHei";
+	color: #d45d5c;
+	position: absolute;
+	bottom: -8px;
+	right: -18px;
+}
+
+/*报纸页脚部分*/
+footer {
+	width: 892px;
+	height: 50px;
+	position: relative;
+}
+
+footer span {
+	font: 12px/18px "SimHei";
+	color: #d45d5c;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
