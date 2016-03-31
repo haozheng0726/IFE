@@ -20,15 +20,15 @@
   在事件处理函数中
   获取aqi-input输入的值，并显示在aqi-display中
   */
-	document.getElementById("button").onclick = function() {
-		var aqi_val = document.getElementById("aqi-input").value;
-		if(aqi_val.length > 0) {
-			document.getElementById("aqi-display").innerHTML = aqi_val;
-		}
-		else {
-			alert("输入不能为空！")
-		};
-	}
+  document.getElementById("button").onclick = function() {
+  var aqi_val = document.getElementById("aqi-input").value;
+  if(aqi_val.length > 0) {
+	document.getElementById("aqi-display").innerHTML = aqi_val;
+  }
+  else {
+	alert("输入不能为空！")
+  };
+  }
 })();
 
 </script>
